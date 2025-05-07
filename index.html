@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopiverse Blog</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    article {
+      background: #fff;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    article h2 {
+      margin-top: 0;
+    }
+    a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shopiverse Blog</h1>
+    <p>Your daily dose of tech, beauty, fashion, and more!</p>
+  </header>
+  <main id="blog-posts">
+    <!-- Blog posts will appear here -->
+  </main>
+  <footer>
+    &copy; 2025 Shopiverse. All rights reserved.
+  </footer>
+
+  <script>
+    const posts = [
+      {
+        title: "Top 5 Beauty Trends in 2025",
+        date: "May 7, 2025",
+        content: "Discover the hottest beauty trends taking over this year, from bold lips to sustainable skincare..."
+      },
+      {
+        title: "Why AI is Changing the Tech World",
+        date: "May 6, 2025",
+        content: "AI continues to revolutionize every industry. Here are the latest breakthroughs you should know about..."
+      }
+    ];
+
+    const blogContainer = document.getElementById("blog-posts");
+
+    posts.forEach(post => {
+      const article = document.createElement("article");
+      article.innerHTML = `
+        <h2>${post.title}</h2>
+        <p><em>${post.date}</em></p>
+        <p>${post.content}</p>
+        <a href="#">Read more</a>
+      `;
+      blogContainer.appendChild(article);
+    });
+  </script>
+</body>
+</html>
